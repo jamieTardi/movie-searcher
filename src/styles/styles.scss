@@ -1,4 +1,5 @@
 @import './globalStyles';
+@import './MovieSearch';
 
 .App{
     height: 100vh;
@@ -10,4 +11,70 @@
     background-position-x: 20%;
     background-position-y: top;
     overflow: hidden;
+    position: relative;
 }
+
+.card{
+    width: 30vw;
+    height: 55vh;
+    border: none;
+    position: absolute;
+    top: 30%;
+    left: 15%;
+    background: white;
+    box-shadow: 5px 5px 15px 5px #000000;
+    position: relative;
+    
+    .movie-pic{
+        object-fit: cover;
+        height: 100%;
+        width: 100%;
+        cursor: pointer;
+        &:hover{
+            transform: scale(1.2, 1.2);
+            filter: blur(2px) brightness(40%);
+            transition: ease-in-out 1.2s all;
+        }
+    }
+    @media (min-width: 1200px){
+        height: 80vh;
+        top: 10%;
+    }
+
+}
+
+.poster-text{
+    position: absolute;
+    top: 20%;
+    color: #eeeeee;
+}
+.hide{
+    display: none;
+}
+
+.movie-page-title{
+ position: absolute;
+ border: none;
+ top: 10%;
+ right: 12%;
+ width: 30vw;
+ height: 20vh;
+ border-radius: 5px;
+ background: linear-gradient(#000693, #1E78CE);
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+ color: white;
+ h1{
+     padding: 0rem 2rem;
+ }
+ p{
+     padding: 0.5rem 2rem;
+ }
+ @media (max-width: 900px){
+     right: 10%;
+     width: 40vw;
+ }
+}
+
+
